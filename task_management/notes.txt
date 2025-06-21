@@ -1,0 +1,4 @@
+# step1 = install the requiremets.txt files
+# step2 = run the django app
+# step3 = call the end point in postman
+# step4 = go through the post man collection and use api

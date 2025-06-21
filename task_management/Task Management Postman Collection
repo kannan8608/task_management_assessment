@@ -1,0 +1,536 @@
+{
+	"info": {
+		"_postman_id": "20b78f3f-39f2-42ae-ba2e-4253db3d0f55",
+		"name": "Task Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38365189"
+	},
+	"item": [
+		{
+			"name": "overall task get api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/tasks/?status=pending&due_date=2025-12-12&start_index=0&end_index=10",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "due_date",
+							"value": "2025-12-12"
+						},
+						{
+							"key": "start_index",
+							"value": "0"
+						},
+						{
+							"key": "end_index",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "overall task get api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/tasks/?status=pending&due_date=2025-12-12&start_index=0&end_index=10",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"tasks",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								},
+								{
+									"key": "due_date",
+									"value": "2025-12-12"
+								},
+								{
+									"key": "start_index",
+									"value": "0"
+								},
+								{
+									"key": "end_index",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jun 2025 17:36:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "598"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data fetched successfully\",\n    \"data\": [\n        {\n            \"title\": \"Health care\",\n            \"description\": \"create api for health care\",\n            \"status\": \"pending\",\n            \"due_date\": \"2025-10-01\",\n            \"created_at\": 1750437570,\n            \"updated_at\": 1750439121\n        },\n        {\n            \"title\": \"Tele Medicin Health care\",\n            \"description\": \"create api for Tele Medicin Health care\",\n            \"status\": \"pending\",\n            \"due_date\": \"2025-11-12\",\n            \"created_at\": 1750439237,\n            \"updated_at\": 1750439237\n        },\n        {\n            \"title\": \"miscellaneous tasks\",\n            \"description\": \"create api for miscellaneous tasks\",\n            \"status\": \"pending\",\n            \"due_date\": \"2028-12-12\",\n            \"created_at\": 1750439718,\n            \"updated_at\": 1750439718\n        }\n    ],\n    \"task_count\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "create task post api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"miscellaneous tasks\",\r\n    \"description\": \"create api for miscellaneous tasks\",\r\n    \"due_date\": \"2028-12-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}api/tasks/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create task post api",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"miscellaneous tasks\",\r\n    \"description\": \"create api for miscellaneous tasks\",\r\n    \"due_date\": \"2028-12-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/tasks/",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jun 2025 17:15:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data created successfully\",\n    \"data\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "update task put api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Health care\",\r\n    \"description\": \"create api for health care\",\r\n    \"due_date\": \"2025-10-01\",\r\n    \"status\": \"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}api/tasks/1/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"tasks",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update task put api",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Health care\",\r\n    \"description\": \"create api for health care\",\r\n    \"due_date\": \"2025-10-01\",\r\n    \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/tasks/1/",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"tasks",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jun 2025 17:05:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete api for task",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}api/tasks/4/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"tasks",
+						"4",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete api for task",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/tasks/4/",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"tasks",
+								"4",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jun 2025 17:40:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "single order task api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/tasks/1/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"tasks",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "single order task api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/tasks/1/",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"tasks",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 20 Jun 2025 17:44:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data fetched successfully\",\n    \"data\": {\n        \"title\": \"Health care\",\n        \"description\": \"create api for health care\",\n        \"status\": \"pending\",\n        \"due_date\": \"2025-10-01\",\n        \"created_at\": 1750437570,\n        \"updated_at\": 1750439121\n    }\n}"
+				}
+			]
+		}
+	]
+}
